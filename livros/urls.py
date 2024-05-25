@@ -1,5 +1,6 @@
 from django.urls import path,include
 from . import views
+
 urlpatterns = [
     path('books/', views.book_list_view), 
     path('books/<int:pk>/',views.book_detail_view),
