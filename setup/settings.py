@@ -28,7 +28,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'livros',
     'rest_framework',
-    'rest_framework.authtoken', #Auth via token
+    'rest_framework.authtoken',
+    'drf_yasg', #Auth via token
 
 ]
 
