@@ -1,16 +1,4 @@
-'''
-Métodos HTTP Correspondentes
-List View:
 
-GET api/users/: Retorna a lista de todos os usuários.
-POST api/users/: Cria um novo usuário.
-Detail View:
-
-GET api/users/<id>/: Retorna os detalhes de um usuário específico.
-PUT api/users/<id>/: Atualiza um usuário específico.
-PATCH api/users/<id>/: Atualiza parcialmente um usuário específico.
-DELETE api/users/<id>/: Exclui um usuário específico.
-'''
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from .models import Book, Author
