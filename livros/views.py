@@ -8,17 +8,6 @@ from drf_yasg.utils import swagger_auto_schema
 from drf_yasg import openapi
 
 
-@swagger_auto_schema(
-    method='get',
-    operation_description="Retrieve a list of all Book instances",
-    responses={200: BookSerializer(many=True)}
-)
-@swagger_auto_schema(
-    method='post',
-    operation_description="Create a new Book instance",
-    request_body=BookSerializer,
-    responses={201: BookSerializer, 400: 'Bad Request'}
-)
 @api_view(['GET','POST'])
 def book_list_view(request):
     if request.method == 'GET':
@@ -35,28 +24,6 @@ def book_list_view(request):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-@swagger_auto_schema(
-    method='get',
-    operation_description="Retrieve a specific Book instance",
-    responses={200: BookSerializer(many=False)}
-)
-@swagger_auto_schema(
-    method='put',
-    operation_description="Update a specific Book instance",
-    request_body=BookSerializer,
-    responses={200: BookSerializer, 400: 'Bad Request'}
-)
-@swagger_auto_schema(
-    method='patch',
-    operation_description="Partially update a specific Book instance",
-    request_body=BookSerializer,
-    responses={200: BookSerializer, 400: 'Bad Request'}
-)
-@swagger_auto_schema(
-    method='delete',
-    operation_description="Delete a specific Book instance",
-    responses={204: 'No Content', 404: 'Not Found'}
-)
 @api_view(['GET','PUT','DELETE','PATCH'])
 def book_detail_view(request,pk):
     try:
@@ -85,17 +52,7 @@ def book_detail_view(request,pk):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
     
-@swagger_auto_schema(
-    method='get',
-    operation_description="Retrieve a list of all Author instances",
-    responses={200: BookSerializer(many=True)}
-)
-@swagger_auto_schema(
-    method='post',
-    operation_description="Create a new Author instance",
-    request_body=BookSerializer,
-    responses={201: BookSerializer, 400: 'Bad Request'}
-)
+
 @api_view(['GET','POST'])
 def author_list_view(request):
     if request.method == 'GET':
@@ -111,28 +68,6 @@ def author_list_view(request):
         
 
 
-@swagger_auto_schema(
-    method='get',
-    operation_description="Retrieve an specific Author instance",
-    responses={200: BookSerializer(many=False)}
-)
-@swagger_auto_schema(
-    method='put',
-    operation_description="Update an specific Author instance",
-    request_body=BookSerializer,
-    responses={200: BookSerializer, 400: 'Bad Request'}
-)
-@swagger_auto_schema(
-    method='patch',
-    operation_description="Partially update an specific Author instance",
-    request_body=BookSerializer,
-    responses={200: BookSerializer, 400: 'Bad Request'}
-)
-@swagger_auto_schema(
-    method='delete',
-    operation_description="Delete an specific Author instance",
-    responses={204: 'No Content', 404: 'Not Found'}
-)
 @api_view(['GET','PUT','DELETE','PATCH'])
 def author_detail_view(request,pk):
     try:
