@@ -1,5 +1,7 @@
 # Book and Author Management API
 
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![DjangoREST](https://img.shields.io/badge/DJANGO-REST-ff1709?style=for-the-badge&logo=django&logoColor=white&color=ff1709&labelColor=gray) ![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
+
 ## Overview
 This project is a **RESTful API for managing books and authors**, developed to consolidate my studies in **Django** and **Django REST Framework (DRF)**. The API uses **Function-Based Views (FBVs)** to provide CRUD operations for books and authors.
 
@@ -50,9 +52,3 @@ This project is a **RESTful API for managing books and authors**, developed to c
 
 ---
 
-## Installation
-
-1. **Clone the repository**:
-   ```bash
-   git clone <repository_url>
-   cd <repository_folder>
